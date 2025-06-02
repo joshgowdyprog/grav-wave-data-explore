@@ -1,6 +1,4 @@
-# Data Challenge 
-
-### GW Open Data Workshop
+# Data Challenge
 
 Challenge activity for the Open Data Workshop course.
 
@@ -15,7 +13,7 @@ Workshop participants may [submit solutions via thinkific](https://learn.gwosc.o
 Check for the deadline date on the Thinkific website.
 
 Challenges are ordered by difficulty. Entries will be rewarded a number of
-points that scales with the difficulty of the challenge. 
+points that scales with the difficulty of the challenge.
 
 Good luck to all!
 
@@ -27,7 +25,7 @@ Identify a loud binary black hole signal in white, Gaussian noise.
 * The data are white, Gaussian noise containing a simulated BBH signal.
 
 1. Load the data into memory. What are the sampling rate and duration of the data?
-2. Plot the data in the time-domain. 
+2. Plot the data in the time-domain.
 3. Plot a spectrogram (or q-transform) of the data, and try to identify the signal.
 4. What is the time of the merger?
 
@@ -47,20 +45,20 @@ Signal in colored, Gaussian noise.
 5. What is the matched filter SNR of the signal?
 
 
-### Challenge 3 (4 points) -- Intermediate
+## Challenge 3 (4 points) -- Intermediate
 
 * Use the data file `challenge3.gwf` with channel `H1:CHALLENGE3`.
-* These are real LIGO data from O2, though we've adjusted the time labels and 
+* These are real LIGO data from O2, though we've adjusted the time labels and
   added some simulated signals.
 * The data contain a loud simulated signal with m1 = m2 = 10 solar masses.
 
 1. What is the merger time of this signal?
 2. What is the matched-filter SNR of this signal?
 
-### Challenge 4 (8 points) -- Advanced
+## Challenge 4 (8 points) -- Advanced
 
 * Use the data file `challenge3.gwf` with channels `H1:CHALLENGE3` and `L1:CHALLENGE3`.
-* These are real LIGO data from O2, though we've adjusted the time labels and 
+* These are real LIGO data from O2, though we've adjusted the time labels and
   added some simulated signals.
 * Any simulated signals have been added to both the H1 and L1 data
 * All simulated signals have spin = 0 and m1 = m2, with m1 somewhere in the range 10-50 solar masses
@@ -78,7 +76,7 @@ against your score. For each signal you find, list:
 3. For each simulated BBH you found, use bilby to compute a posterior
    distribution for the mass. You can fix the spin and mass ratio to make
    this run faster.
-   
+
 ### Useful notes
 
 Processing data from a local file with Bilby
@@ -106,7 +104,7 @@ To load data in google co-lab. Run this code, and then 'restart runtime', and ru
 # -- download data
 ! wget https://dcc.ligo.org/public/0187/G2300818/001/challenge3.gwf
 
-# -- for gwpy 
+# -- for gwpy
 from gwpy.timeseries import TimeSeries
 gwpy_strain = TimeSeries.read('challenge3.gwf', channel="H1:CHALLENGE3")
 
